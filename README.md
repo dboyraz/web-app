@@ -222,7 +222,7 @@ npm run dev
 The app will be available at:
 
 - Frontend: http://localhost:5173
-- Server: http://localhost:8080
+- Server: https://web-app-iota-eosin.vercel.app/
 
 ## User Flow
 

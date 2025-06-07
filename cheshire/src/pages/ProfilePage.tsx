@@ -27,7 +27,7 @@ const ProfilePage = () => {
         setError("");
 
         const response = await apiFetch(
-          "http://localhost:8080/api/user/profile"
+          "https://web-app-iota-eosin.vercel.app//api/user/profile"
         );
 
         const data = await response.json();

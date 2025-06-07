@@ -11,7 +11,7 @@ export const createJWTAdapter = () => {
      */
     getNonce: async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/auth/nonce');
+        const response = await fetch('https://web-app-iota-eosin.vercel.app//api/auth/nonce');
         const { nonce } = await response.json();
         return nonce;
       } catch (error) {

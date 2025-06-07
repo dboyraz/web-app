@@ -157,16 +157,16 @@ const StatusPage = () => {
 
       // Check other services in parallel
       const [authStatus, postgresStatus, redisStatus] = await Promise.all([
-        checkService("Auth System", "http://localhost:8080/api/me"),
-        checkService("PostgreSQL", "http://localhost:8080/api/status"),
-        checkService("Redis", "http://localhost:8080/api/debug/redis"),
+        checkService("Auth System", "https://web-app-iota-eosin.vercel.app//api/me"),
+        checkService("PostgreSQL", "https://web-app-iota-eosin.vercel.app//api/status"),
+        checkService("Redis", "https://web-app-iota-eosin.vercel.app//api/debug/redis"),
       ]);
 
       setServices([systemInfoService, authStatus, postgresStatus, redisStatus]);
 
       // Get system information
       try {
-        const statusResponse = await fetch("http://localhost:8080/api/status");
+        const statusResponse = await fetch("https://web-app-iota-eosin.vercel.app//api/status");
         if (statusResponse.ok) {
           const statusData = await statusResponse.json();
           setSystemInfo({

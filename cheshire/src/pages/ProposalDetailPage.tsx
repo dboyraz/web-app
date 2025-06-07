@@ -129,7 +129,7 @@ const ProposalDetailPage: React.FC = () => {
         setError("");
 
         const response = await apiFetch(
-          "http://localhost:8080/api/user/profile"
+          "https://web-app-iota-eosin.vercel.app//api/user/profile"
         );
 
         if (response.status === 404) {

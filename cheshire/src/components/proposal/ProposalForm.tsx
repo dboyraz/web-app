@@ -161,7 +161,7 @@ const ProposalForm = ({ onSuccess, onError }: ProposalFormProps) => {
     const loadInfo = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/proposals/can-create",
+          "https://web-app-iota-eosin.vercel.app//api/proposals/can-create",
           {
             credentials: "include",
           }
@@ -256,7 +256,7 @@ const ProposalForm = ({ onSuccess, onError }: ProposalFormProps) => {
       );
 
       const response = await fetch(
-        "http://localhost:8080/api/proposals/create",
+        "https://web-app-iota-eosin.vercel.app//api/proposals/create",
         {
           method: "POST",
           headers: {

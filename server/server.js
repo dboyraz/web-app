@@ -79,10 +79,16 @@ setInterval(async () => {
 // ================ MIDDLEWARE SETUP ================
 
 // Set up CORS
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: [
+    process.env.FRONTEND_URL || "https://web-app-iota-eosin.vercel.app",
+    "https://web-app-iota-eosin.vercel.app", // Your Vercel frontend
+    "https://web-app-git-master-d-bs-projects-3d6c7011.vercel.app/",
+    "https://web-nhwyw22tx-d-bs-projects-3d6c7011.vercel.app/"
+  ],
   credentials: true
-}));
+})); 
 
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));

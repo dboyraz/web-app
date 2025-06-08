@@ -28,7 +28,7 @@ const UserSetupSimple = () => {
     const loadOrgs = async () => {
       try {
         const response = await fetch(
-          "https://web-app-iota-eosin.vercel.app//api/user/organizations"
+          "https://server-production-84d1.up.railway.app/api/user/organizations"
         );
         const data = await response.json();
         if (response.ok) {
@@ -69,7 +69,7 @@ const UserSetupSimple = () => {
 
         try {
           const response = await fetch(
-            `https://web-app-iota-eosin.vercel.app//api/user/unique-id/check?id=${formData.unique_id}`
+            `https://server-production-84d1.up.railway.app/api/user/unique-id/check?id=${formData.unique_id}`
           );
           const data = await response.json();
 
@@ -113,7 +113,7 @@ const UserSetupSimple = () => {
 
         try {
           const response = await fetch(
-            `https://web-app-iota-eosin.vercel.app//api/user/organization/check?id=${formData.organization_id}`
+            `https://server-production-84d1.up.railway.app/api/user/organization/check?id=${formData.organization_id}`
           );
           const data = await response.json();
 
@@ -175,7 +175,7 @@ const UserSetupSimple = () => {
         wallet_address: address, // Include wallet address for user creation
       };
 
-      const response = await apiFetch("https://web-app-iota-eosin.vercel.app//api/user/create", {
+      const response = await apiFetch("https://server-production-84d1.up.railway.app/api/user/create", {
         method: "POST",
         body: JSON.stringify(requestBody),
       });

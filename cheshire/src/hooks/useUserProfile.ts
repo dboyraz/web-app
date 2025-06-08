@@ -109,7 +109,7 @@ export const useUserProfile = () => {
     try {
       setLoadingOrganizations(true);
       
-      const response = await fetch('https://web-app-iota-eosin.vercel.app//api/user/organizations');
+      const response = await fetch('https://server-production-84d1.up.railway.app/api/user/organizations');
       const data = await response.json();
       
       if (response.ok) {
@@ -143,7 +143,7 @@ export const useUserProfile = () => {
       setUniqueIdCheck(prev => ({ ...prev, checking: true }));
       
       const response = await fetch(
-        `https://web-app-iota-eosin.vercel.app//api/user/unique-id/check?id=${encodeURIComponent(uniqueId)}`
+        `https://server-production-84d1.up.railway.app/api/user/unique-id/check?id=${encodeURIComponent(uniqueId)}`
       );
       const data = await response.json();
       
@@ -187,7 +187,7 @@ export const useUserProfile = () => {
       setOrganizationCheck(prev => ({ ...prev, checking: true }));
       
       const response = await fetch(
-        `https://web-app-iota-eosin.vercel.app//api/user/organization/check?id=${encodeURIComponent(organizationId)}`
+        `https://server-production-84d1.up.railway.app/api/user/organization/check?id=${encodeURIComponent(organizationId)}`
       );
       const data = await response.json();
       
@@ -226,7 +226,7 @@ export const useUserProfile = () => {
     try {
       setCreatingUser(true);
       
-      const response = await fetch('https://web-app-iota-eosin.vercel.app//api/user/create', {
+      const response = await fetch('https://server-production-84d1.up.railway.app/api/user/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -257,7 +257,7 @@ export const useUserProfile = () => {
    */
   const getUserProfile = useCallback(async () => {
     try {
-      const response = await fetch('https://web-app-iota-eosin.vercel.app//api/user/profile', {
+      const response = await fetch('https://server-production-84d1.up.railway.app/api/user/profile', {
         credentials: 'include', // Include auth cookies
       });
       
@@ -283,7 +283,7 @@ export const useUserProfile = () => {
   const checkUserExists = useCallback(async (walletAddress: string) => {
     try {
       const response = await fetch(
-        `https://web-app-iota-eosin.vercel.app//api/user/exists?address=${encodeURIComponent(walletAddress)}`
+        `https://server-production-84d1.up.railway.app/api/user/exists?address=${encodeURIComponent(walletAddress)}`
       );
       const data = await response.json();
       

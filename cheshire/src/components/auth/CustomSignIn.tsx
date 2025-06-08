@@ -37,7 +37,7 @@ const CustomSignIn = () => {
       console.log("🔐 User exists, proceeding with JWT signin...");
 
       // Step 1: Get nonce from server
-      const nonceResponse = await fetch("https://web-app-iota-eosin.vercel.app//api/auth/nonce");
+      const nonceResponse = await fetch("https://server-production-84d1.up.railway.app/api/auth/nonce");
       const { nonce } = await nonceResponse.json();
 
       // Step 2: Create message

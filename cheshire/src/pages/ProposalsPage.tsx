@@ -87,9 +87,9 @@ const ProposalsPage: React.FC = () => {
         // We'll load enough to show multiple pages
         const [proposalsResponse, canCreateResponse] = await Promise.all([
           apiFetch(
-            "https://web-app-iota-eosin.vercel.app//api/proposals/organization?limit=200&offset=0"
+            "https://server-production-84d1.up.railway.app/api/proposals/organization?limit=200&offset=0"
           ),
-          apiFetch("https://web-app-iota-eosin.vercel.app//api/proposals/can-create"),
+          apiFetch("https://server-production-84d1.up.railway.app/api/proposals/can-create"),
         ]);
 
         // Handle proposals response

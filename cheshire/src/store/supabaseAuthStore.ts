@@ -127,7 +127,7 @@ export const useSupabaseAuthStore = create<AuthState>((set, get) => ({
     
     try {
       const response = await fetch(
-        `https://web-app-iota-eosin.vercel.app//api/auth/check-user?address=${encodeURIComponent(walletAddress)}`
+        `https://server-production-84d1.up.railway.app/api/auth/check-user?address=${encodeURIComponent(walletAddress)}`
       );
       
       const data = await response.json();
@@ -162,7 +162,7 @@ export const useSupabaseAuthStore = create<AuthState>((set, get) => ({
     set({ isAuthenticating: true });
     
     try {
-      const response = await fetch('https://web-app-iota-eosin.vercel.app//api/auth/signin', {
+      const response = await fetch('https://server-production-84d1.up.railway.app/api/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ export const useSupabaseAuthStore = create<AuthState>((set, get) => ({
     
     try {
       if (jwtToken) {
-        await fetch('https://web-app-iota-eosin.vercel.app//api/auth/signout', {
+        await fetch('https://server-production-84d1.up.railway.app/api/auth/signout', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${jwtToken}`,
